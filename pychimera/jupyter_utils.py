@@ -8,7 +8,7 @@ Python, Jupyter and Notebook stuff
 from __future__ import print_function
 import sys
 try:
-    from cStringIO import StringIO
+    from io import StringIO #corrected line
 except ImportError:
     from StringIO import StringIO
 
