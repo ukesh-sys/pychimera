@@ -312,7 +312,7 @@ def run_cli_options(args):
                 sys.argv.pop(1)
             globals().update(runpy.run_module(choice, run_name="__main__"))
         elif flag == '-c':
-            exec choice in globals(), locals()  # workaround
+            exec(choice, globals(), locals())  # corrected line
         else:
             continue
         break
